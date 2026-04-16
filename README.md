@@ -94,7 +94,11 @@
 
 ## 系統畫面截圖
 
-*(截圖)*
+![太空即時數據_1](pictures/太空即時數據_1.png)
+![太空即時數據_2](pictures/太空即時數據_2.png)
+![宇宙資料庫](pictures/宇宙資料庫.png)
+![AI助理](pictures/AI助理.png)
+
 
 ## 授權條款 (License)
 
