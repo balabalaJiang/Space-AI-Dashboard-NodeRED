@@ -1,0 +1,22 @@
+{
+  "name": "space-ai-dashboard",
+  "version": "8.0.0",
+  "description": "醫用資訊系統分析與設計 - 太空指揮中心 (Node-RED)",
+  "main": "flows.json",
+  "scripts": {
+    "start": "node-red -u . flows.json"
+  },
+  "dependencies": {
+    "node-red": "^3.1.0",
+    "node-red-contrib-web-worldmap": "5.5.4",
+    "node-red-dashboard": "3.6.6"
+  },
+  "keywords": [
+    "node-red",
+    "dashboard",
+    "space",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT"
+}
