@@ -60,5 +60,9 @@
 
 *(儀表板的實際截圖)*
 
+## 授權條款 (License)
+
+本專案採用 [MIT License](https://www.google.com/search?q=LICENSE) 授權。您可以自由使用、修改與散佈此專案內容，但請保留原作者版權聲明。
+
 ---
 *Developed for the Medical Information System Analysis and Design course.*
