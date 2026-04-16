@@ -1,0 +1,30 @@
+Node-RED 特定與機密檔案 (非常重要)
+
+flows_cred.json
+*_cred.json
+.config.json
+.config.json.backup
+.sessions.json
+
+Node.js 依賴套件與日誌
+
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+
+環境變數
+
+.env
+.env.*
+
+作業系統生成的隱藏檔案
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
