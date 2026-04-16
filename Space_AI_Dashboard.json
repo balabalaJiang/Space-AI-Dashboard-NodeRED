@@ -1,0 +1,1308 @@
+[
+    {
+        "id": "tab_iss_tracker_v8",
+        "type": "tab",
+        "label": "Space Command V8.0 (AI Fix)",
+        "disabled": false,
+        "info": "太空指揮中心 V8.0：修復 AI 錯誤顯示 + 整合式自動輪播影像館"
+    },
+    {
+        "id": "e9a49c2668ecc1b3",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#28a2a4",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#28a2a4",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#28a2a4",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#47d0d2",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#28a2a4",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d9b9f0b25ae29152",
+        "type": "ui_group",
+        "name": "功能執行",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a6a6f76428ed0c64",
+        "type": "ui_group",
+        "name": "資料輸入",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8abe704930641ca2",
+        "type": "ui_group",
+        "name": "資料輸出",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ui_tab_iss",
+        "type": "ui_tab",
+        "z": "tab_iss_tracker_v8",
+        "name": "太空即時數據",
+        "icon": "fa-crosshairs",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ui_tab_deep_space",
+        "type": "ui_tab",
+        "z": "tab_iss_tracker_v8",
+        "name": "宇宙資料庫",
+        "icon": "fa-globe",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ui_tab_intel",
+        "type": "ui_tab",
+        "z": "tab_iss_tracker_v8",
+        "name": "AI助理",
+        "icon": "fa-user-secret",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "group_map",
+        "type": "ui_group",
+        "z": "tab_iss_tracker_v8",
+        "name": "即時軌道追蹤",
+        "tab": "ui_tab_iss",
+        "order": 1,
+        "disp": true,
+        "width": 21,
+        "collapse": false
+    },
+    {
+        "id": "group_telemetry",
+        "type": "ui_group",
+        "z": "tab_iss_tracker_v8",
+        "name": "遙測狀態",
+        "tab": "ui_tab_iss",
+        "order": 2,
+        "disp": true,
+        "width": "4",
+        "collapse": false
+    },
+    {
+        "id": "group_video",
+        "type": "ui_group",
+        "z": "tab_iss_tracker_v8",
+        "name": "即時影像串流",
+        "tab": "ui_tab_iss",
+        "order": 4,
+        "disp": true,
+        "width": 19,
+        "collapse": false
+    },
+    {
+        "id": "group_crew",
+        "type": "ui_group",
+        "z": "tab_iss_tracker_v8",
+        "name": "太空人員名單",
+        "tab": "ui_tab_iss",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "group_gallery_unified",
+        "type": "ui_group",
+        "z": "tab_iss_tracker_v8",
+        "name": "太空影像館",
+        "tab": "ui_tab_deep_space",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "group_solar",
+        "type": "ui_group",
+        "z": "tab_iss_tracker_v8",
+        "name": "行星數據庫",
+        "tab": "ui_tab_deep_space",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "group_ai",
+        "type": "ui_group",
+        "z": "tab_iss_tracker_v8",
+        "name": "AI 問答區",
+        "tab": "ui_tab_intel",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "group_nasa",
+        "type": "ui_group",
+        "z": "tab_iss_tracker_v8",
+        "name": "每日天文資訊",
+        "tab": "ui_tab_intel",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7fe39018265d7e39",
+        "type": "ui_group",
+        "name": "太空天氣監測",
+        "tab": "ui_tab_iss",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "91660cd8dd51f3f9",
+        "type": "ui_group",
+        "name": "每日新聞",
+        "tab": "ui_tab_intel",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "inject_iss",
+        "type": "inject",
+        "z": "tab_iss_tracker_v8",
+        "name": "每3秒觸發",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "req_iss_telemetry"
+            ]
+        ]
+    },
+    {
+        "id": "req_iss_telemetry",
+        "type": "http request",
+        "z": "tab_iss_tracker_v8",
+        "name": "GET WhereTheISS API",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.wheretheiss.at/v1/satellites/25544",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "func_split_data"
+            ]
+        ]
+    },
+    {
+        "id": "func_split_data",
+        "type": "function",
+        "z": "tab_iss_tracker_v8",
+        "name": "核心邏輯 (Data Core)",
+        "func": "var lat = parseFloat(msg.payload.latitude);\nvar lon = parseFloat(msg.payload.longitude);\nvar alt = msg.payload.altitude;\nvar vel = msg.payload.velocity;\nvar vis = msg.payload.visibility;\n\nvar iconColor = vis === \"daylight\" ? \"#FF8C00\" : \"#808080\";\nvar trailColor = vis === \"daylight\" ? \"#FFD700\" : \"#aaaaaa\";\n\nvar msgMap = {\n    payload: {\n        name: \"ISS\",\n        lat: lat,\n        lon: lon,\n        icon: \"satellite\",\n        iconColor: iconColor, \n        layer: \"ISS Layer\",\n        trail: 500, \n        color: trailColor, \n        zoom: 3,\n        command: { lat: lat, lon: lon }\n    }\n};\n\nvar msgVel = { payload: Math.round(vel), topic: \"Velocity\" };\nvar msgAlt = { payload: Math.round(alt), topic: \"Altitude\" };\n\nvar targetLat = 24.1632;\nvar targetLon = 120.6402;\nfunction getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {\n  var R = 6371; \n  var dLat = deg2rad(lat2-lat1);  \n  var dLon = deg2rad(lon2-lon1); \n  var a = \n    Math.sin(dLat/2) * Math.sin(dLat/2) +\n    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * \n    Math.sin(dLon/2) * Math.sin(dLon/2);\n  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); \n  return R * c;\n}\nfunction deg2rad(deg) { return deg * (Math.PI/180) }\nvar distance = Math.round(getDistanceFromLatLonInKm(lat, lon, targetLat, targetLon));\nvar msgDist = { payload: distance, topic: \"Distance to Taichung\" };\n\nvar statusText = vis === \"daylight\" ? \"☀️ 日照區 (DAYLIGHT)\" : \"🌑 陰影區 (ECLIPSE)\";\nvar statusColor = vis === \"daylight\" ? \"#FF8C00\" : \"#808080\";\nvar msgVis = { payload: statusText, color: statusColor };\n\nvar prevVis = flow.get('prev_visibility') || \"\";\nvar msgAlert = null;\nvar msgToast = null;\nif (prevVis !== \"\" && vis !== prevVis) {\n    var text = \"\";\n    if (vis === \"daylight\") {\n        text = \"警報：進入日照區。\";\n        msgToast = { payload: \"☀️ 系統: 偵測到日照\", color: \"orange\" };\n    } else {\n        text = \"警報：進入陰影區。\";\n        msgToast = { payload: \"🌑 系統: 偵測到陰影\", color: \"grey\" };\n    }\n    msgAlert = { payload: text };\n}\nflow.set('prev_visibility', vis);\n\nreturn [msgMap, msgVel, msgAlt, msgDist, msgVis, msgAlert, msgToast];",
+        "outputs": 7,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 100,
+        "wires": [
+            [
+                "worldmap_node"
+            ],
+            [
+                "ui_gauge_vel"
+            ],
+            [
+                "ui_gauge_alt"
+            ],
+            [
+                "ui_gauge_dist"
+            ],
+            [
+                "ui_text_vis"
+            ],
+            [
+                "ui_audio_alert"
+            ],
+            [
+                "ui_toast_alert"
+            ]
+        ]
+    },
+    {
+        "id": "worldmap_node",
+        "type": "worldmap",
+        "z": "tab_iss_tracker_v8",
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSM",
+        "cluster": "",
+        "x": 860,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ui_map_iframe",
+        "type": "ui_template",
+        "z": "tab_iss_tracker_v8",
+        "group": "group_map",
+        "name": "Map iFrame",
+        "order": 1,
+        "width": 21,
+        "height": 10,
+        "format": "<div style=\"width:100%; height:100%; border: 1px solid #00f0ff; box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);\">\n    <iframe src=\"/worldmap\" style=\"width:100%; height:100%; border:none; filter: invert(100%) hue-rotate(180deg) contrast(1.2);\"></iframe>\n</div>\n<style>\nbody, .md-content {\n    background-color: #0b0f19 !important;\n    background-image: radial-gradient(circle at 50% 50%, #1b2735 0%, #090a0f 100%);\n    color: #00f0ff !important;\n    font-family: 'Courier New', Courier, monospace !important;\n}\nmd-card {\n    background-color: rgba(16, 24, 40, 0.85) !important;\n    border: 1px solid rgba(0, 240, 255, 0.3);\n    box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);\n    border-radius: 4px !important;\n}\n.md-toolbar-tools {\n    background-color: rgba(5, 8, 13, 0.95) !important;\n    border-bottom: 2px solid #ff0055;\n    color: #00f0ff !important;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    text-shadow: 0 0 5px #00f0ff;\n}\n.nr-dashboard-template .nr-dashboard-card-title {\n    color: #ff0055 !important;\n    font-weight: bold;\n    letter-spacing: 1px;\n    font-size: 1.1em;\n    text-transform: uppercase;\n}\n.md-button {\n    background: rgba(0, 240, 255, 0.1) !important;\n    border: 1px solid #00f0ff !important;\n    color: #00f0ff !important;\n    transition: all 0.3s ease;\n}\n.md-button:hover {\n    background: rgba(0, 240, 255, 0.3) !important;\n    box-shadow: 0 0 15px #00f0ff;\n}\nmd-input-container label {\n    color: #00f0ff !important;\n}\n.md-select-value {\n    color: #fff !important;\n    border-bottom-color: #00f0ff !important;\n}\n.nr-dashboard-gauge text {\n    fill: #00f0ff !important;\n    font-family: 'Courier New' !important;\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 870,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ui_gauge_vel",
+        "type": "ui_gauge",
+        "z": "tab_iss_tracker_v8",
+        "name": "Velocity",
+        "group": "group_telemetry",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "速度 (km/h)",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": "27000",
+        "max": "28000",
+        "colors": [
+            "#00f0ff",
+            "#00f0ff",
+            "#ff0055"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 860,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ui_gauge_alt",
+        "type": "ui_gauge",
+        "z": "tab_iss_tracker_v8",
+        "name": "Altitude",
+        "group": "group_telemetry",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "高度 (km)",
+        "label": "km",
+        "format": "{{value}}",
+        "min": "400",
+        "max": "440",
+        "colors": [
+            "#00f0ff",
+            "#00f0ff",
+            "#ff0055"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 860,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ui_gauge_dist",
+        "type": "ui_gauge",
+        "z": "tab_iss_tracker_v8",
+        "name": "Distance to Taichung",
+        "group": "group_telemetry",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "距離目標",
+        "label": "km",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "20000",
+        "colors": [
+            "#00f0ff",
+            "#00f0ff",
+            "#ff0055"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 880,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ui_text_vis",
+        "type": "ui_text",
+        "z": "tab_iss_tracker_v8",
+        "group": "group_telemetry",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Visibility",
+        "label": "狀態:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 860,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ui_audio_alert",
+        "type": "ui_audio",
+        "z": "tab_iss_tracker_v8",
+        "name": "語音廣播",
+        "group": "group_telemetry",
+        "voice": "Microsoft Hanhan - Chinese (Traditional, Taiwan)",
+        "always": "",
+        "x": 860,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ui_toast_alert",
+        "type": "ui_toast",
+        "z": "tab_iss_tracker_v8",
+        "position": "top photo",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "ACK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Space Alert",
+        "name": "Toast通知",
+        "x": 860,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "ui_video_live",
+        "type": "ui_template",
+        "z": "tab_iss_tracker_v8",
+        "group": "group_video",
+        "name": "NASA Live Stream",
+        "order": 1,
+        "width": 19,
+        "height": 12,
+        "format": "<!-- 直播容器：黑底圓角 -->\n<div style=\"\n    width: 100%; \n    height: 100%; \n    min-height: 300px; \n    background-color: #000; \n    border-radius: 8px; \n    overflow: hidden; \n    border: 1px solid #333;\n    display: flex;\n    flex-direction: column;\">\n\n    <!-- 標題列 -->\n    <div style=\"\n        padding: 8px 12px; \n        background: #1a1a1a; \n        color: #fff; \n        font-weight: bold; \n        font-size: 14px;\n        border-bottom: 1px solid #333;\">\n        🔴 LIVE | 國際太空站 (ISS) 直播\n    </div>\n\n    <!-- YouTube 嵌入畫面 -->\n    <div style=\"flex-grow: 1; position: relative;\">\n        <!-- 更新：使用指定的影片 ID: Hj1XwNjvkDE -->\n        <iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/Hj1XwNjvkDE?autoplay=1&mute=1&controls=1\"\n            title=\"ISS Live Stream\" frameborder=\"0\"\n            allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"\n            allowfullscreen style=\"position: absolute; top: 0; left: 0;\">\n        </iframe>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 870,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "inject_nasa",
+        "type": "inject",
+        "z": "tab_iss_tracker_v8",
+        "name": "啟動時觸發",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 860,
+        "wires": [
+            [
+                "req_nasa"
+            ]
+        ]
+    },
+    {
+        "id": "req_nasa",
+        "type": "http request",
+        "z": "tab_iss_tracker_v8",
+        "name": "GET NASA APOD",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 860,
+        "wires": [
+            [
+                "ui_nasa_card"
+            ]
+        ]
+    },
+    {
+        "id": "ui_nasa_card",
+        "type": "ui_template",
+        "z": "tab_iss_tracker_v8",
+        "group": "group_nasa",
+        "name": "NASA Card",
+        "order": 1,
+        "width": 8,
+        "height": 12,
+        "format": "<div style=\"padding: 10px; display: flex; flex-direction: column; height: 100%; overflow-y: auto;\">\n    <h3 style=\"margin-top:0; color: #00f0ff; border-bottom:1px solid #00f0ff;\">{{msg.payload.title}}</h3>\n    \n    <div style=\"width: 100%; text-align: center; margin: 10px 0;\">\n        <img src=\"{{msg.payload.url}}\" \n             alt=\"NASA APOD\" \n             style=\"max-width: 100%; max-height: 250px; border: 1px solid #ff0055; box-shadow: 0 0 10px #ff0055;\">\n    </div>\n    \n    <p style=\"font-size: 14px; line-height: 1.4; color: #ccc; font-family: monospace;\">\n        {{msg.payload.explanation}}\n    </p>\n    <small style=\"color: #00f0ff;\">日誌日期: {{msg.payload.date}}</small>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 610,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "inject_crew",
+        "type": "inject",
+        "z": "tab_iss_tracker_v8",
+        "name": "每1小時更新",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 2,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "req_crew"
+            ]
+        ]
+    },
+    {
+        "id": "req_crew",
+        "type": "http request",
+        "z": "tab_iss_tracker_v8",
+        "name": "GET Astros",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.open-notify.org/astros.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "func_crew_fallback"
+            ]
+        ]
+    },
+    {
+        "id": "func_crew_fallback",
+        "type": "function",
+        "z": "tab_iss_tracker_v8",
+        "name": "Crew Data Handler",
+        "func": "if (msg.statusCode !== 200 || !msg.payload || !msg.payload.people) {\n\n    msg.payload = {\n        number: \"7 (模擬連線)\",\n        people: [\n            { name: \"指揮官薛帕德\", craft: \"ISS (Sim)\" },\n            { name: \"莎拉·康納\", craft: \"ISS (Sim)\" },\n            { name: \"艾倫·蕾普莉\", craft: \"SpaceX Dragon\" },\n            { name: \"馬克·瓦特尼\", craft: \"Soyuz\" },\n            { name: \"庫柏\", craft: \"Endurance\" },\n            { name: \"布蘭德博士\", craft: \"Endurance\" },\n            { name: \"TARS\", craft: \"Robot Case\" }\n        ]\n    };\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 400,
+        "wires": [
+            [
+                "ui_crew_list"
+            ]
+        ]
+    },
+    {
+        "id": "ui_crew_list",
+        "type": "ui_template",
+        "z": "tab_iss_tracker_v8",
+        "group": "group_crew",
+        "name": "Crew List",
+        "order": 1,
+        "width": 6,
+        "height": 7,
+        "format": "<div style=\"padding: 10px;\">\n    <div style=\"text-align: center; margin-bottom: 15px; border: 1px solid #00f0ff; padding: 10px; background: rgba(0,240,255,0.1);\">\n        <i class=\"fa fa-users fa-3x\" style=\"color: #00f0ff;\"></i>\n        <h2 style=\"color: #fff; margin:5px 0;\">{{msg.payload.number}} 在軌人員</h2>\n    </div>\n    \n    <div style=\"height: 250px; overflow-y: auto;\">\n        <ul style=\"list-style: none; padding: 0;\">\n            <li ng-repeat=\"person in msg.payload.people\" \n                style=\"padding: 8px; border-bottom: 1px dashed #333; display: flex; justify-content: space-between; align-items: center;\">\n                <span style=\"font-weight: bold; color: #00f0ff; font-family: monospace;\">\n                    [ <i class=\"fa fa-user-astronaut\"></i> ] {{person.name}}\n                </span>\n                <span style=\"background: #ff0055; color:black; padding: 2px 8px; font-size: 0.7em; font-weight:bold; border-radius: 2px;\">\n                    {{person.craft}}\n                </span>\n            </li>\n        </ul>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 860,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "btn_next_photo",
+        "type": "ui_button",
+        "z": "tab_iss_tracker_v8",
+        "name": "Next Photo",
+        "group": "group_gallery_unified",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "下一張 (NEXT)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-forward",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "next",
+        "topicType": "str",
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "func_gallery_logic"
+            ]
+        ]
+    },
+    {
+        "id": "sw_auto_play",
+        "type": "ui_switch",
+        "z": "tab_iss_tracker_v8",
+        "name": "Auto Play",
+        "label": "自動輪播 (AUTO)",
+        "tooltip": "",
+        "group": "group_gallery_unified",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "autoplay",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 120,
+        "y": 520,
+        "wires": [
+            [
+                "func_gallery_logic"
+            ]
+        ]
+    },
+    {
+        "id": "inject_gallery_auto",
+        "type": "inject",
+        "z": "tab_iss_tracker_v8",
+        "name": "每10秒觸發(Auto)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "auto_tick",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 560,
+        "wires": [
+            [
+                "func_gallery_logic"
+            ]
+        ]
+    },
+    {
+        "id": "func_gallery_logic",
+        "type": "function",
+        "z": "tab_iss_tracker_v8",
+        "name": "Gallery Controller (V8)",
+        "func": "// 初始化\nvar mode = flow.get('gallery_mode') || 'deep_space';\nvar auto = flow.get('gallery_auto') || false;\n\n// 處理輸入指令\nif (msg.topic === 'mode') {\n    mode = msg.payload;\n    flow.set('gallery_mode', mode);\n    // 切換模式後重置索引並觸發更新\n    flow.set('gallery_index_' + mode, 0);\n}\nelse if (msg.topic === 'autoplay') {\n    auto = msg.payload;\n    flow.set('gallery_auto', auto);\n    return null; // 不直接觸發，等待下一次 tick\n}\nelse if (msg.topic === 'auto_tick') {\n    if (!auto) return null; // 如果沒開自動，忽略 tick\n}\n// 'next' 指令會直接往下執行\n\n\nvar deepImages = [\n    { t: \"創生之柱 (M16)\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Eagle_nebula_pillars.jpg/800px-Eagle_nebula_pillars.jpg\", d: \"韋伯望遠鏡拍攝的老鷹星雲中心。\" },\n    { t: \"船底座星雲\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Carina_Nebula_by_James_Webb_Space_Telescope.jpg/800px-Carina_Nebula_by_James_Webb_Space_Telescope.jpg\", d: \"宇宙懸崖：恆星形成區細節。\" },\n    { t: \"韋伯深空視場\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Webb%27s_First_Deep_Field.jpg/800px-Webb%27s_First_Deep_Field.jpg\", d: \"SMACS 0723 星系團，遙遠星系光芒。\" },\n    { t: \"史蒂芬五重奏\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Stephan%27s_Quintet_by_James_Webb_Space_Telescope_NIRCam%2BMIRI_Composite.jpg/800px-Stephan%27s_Quintet_by_James_Webb_Space_Telescope_NIRCam%2BMIRI_Composite.jpg\", d: \"五個星系的引力之舞。\" },\n    { t: \"狼蛛星雲\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Tarantula_Nebula_TRAPPIST.jpg/800px-Tarantula_Nebula_TRAPPIST.jpg\", d: \"本星系群中最活躍的恆星形成區。\" },\n    { t: \"哈伯深空\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Hubble_Ultra_Deep_Field_with_Scale_Bar.jpg/800px-Hubble_Ultra_Deep_Field_with_Scale_Bar.jpg\", d: \"包含約10,000個星系的深空影像。\" },\n    { t: \"草帽星系 (M104)\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/M104_ngc4594_sombrero_galaxy_hi-res.jpg/800px-M104_ngc4594_sombrero_galaxy_hi-res.jpg\", d: \"位於室女座的螺旋星系。\" },\n    { t: \"蟹狀星雲 (M1)\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/800px-Crab_Nebula.jpg\", d: \"超新星殘骸，脈衝星風星雲。\" },\n    { t: \"渦狀星系 (M51)\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Messier51_sRGB.jpg/800px-Messier51_sRGB.jpg\", d: \"經典的螺旋星系結構。\" },\n    { t: \"仙女座星系 (M31)\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/M31_Galaxy.jpg/800px-M31_Galaxy.jpg\", d: \"距離地球最近的螺旋星系。\" },\n    { t: \"貓眼星雲\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Cat%27s_Eye_Nebula_Mosaico.jpg/800px-Cat%27s_Eye_Nebula_Mosaico.jpg\", d: \"結構最複雜的行星狀星雲之一。\" },\n    { t: \"馬頭星雲\", i: \"https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Barnard_33.jpg/800px-Barnard_33.jpg\", d: \"位於獵戶座的暗星雲。\" }\n];\n    \nvar idx = flow.get('gallery_index_deep') || 0;\nif (msg.topic === 'next' || msg.topic === 'auto_tick') idx++;\nif (idx >= deepImages.length) idx = 0;\nflow.set('gallery_index_deep', idx);\n    \nvar imgData = deepImages[idx];\nreturn [{\n    payload: {\n        img: imgData.i,\n        title: imgData.t,\n        desc: imgData.d,\n        source: \"NASA/ESA/Hubble/Webb\"\n    }\n}, null];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "ui_gallery_display"
+            ],
+            [
+                "req_mars_api"
+            ]
+        ]
+    },
+    {
+        "id": "req_mars_api",
+        "type": "http request",
+        "z": "tab_iss_tracker_v8",
+        "name": "NASA Mars API",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=DEMO_KEY",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 670,
+        "y": 480,
+        "wires": [
+            [
+                "ui_gallery_display"
+            ]
+        ]
+    },
+    {
+        "id": "ui_gallery_display",
+        "type": "ui_template",
+        "z": "tab_iss_tracker_v8",
+        "group": "group_gallery_unified",
+        "name": "Unified Display",
+        "order": 3,
+        "width": 10,
+        "height": 9,
+        "format": "<div style=\"text-align: center; height: 100%; display: flex; flex-direction: column; justify-content: center; border: 1px solid #00f0ff; background: rgba(0,0,0,0.4); padding: 10px;\">\n    <div style=\"display:flex; justify-content:space-between; align-items:center; border-bottom: 1px dashed #ff0055; margin-bottom:10px; padding-bottom:5px;\">\n        <h3 style=\"color: #00f0ff; margin:0;\">{{msg.payload.title}}</h3>\n        <span style=\"font-size:0.6em; background:#ff0055; color:black; padding:2px 5px;\">{{msg.payload.source}}</span>\n    </div>\n    \n    <div style=\"flex-grow:1; display:flex; align-items:center; justify-content:center;\">\n        <img src=\"{{msg.payload.img}}\" style=\"max-width: 100%; max-height: 250px; border: 1px solid #fff; box-shadow: 0 0 10px rgba(255,255,255,0.2);\">\n    </div>\n    \n    <p style=\"margin-top: 10px; font-size: 0.9em; color: #ccc; text-align: left; background:rgba(0,0,0,0.5); padding:5px;\">\n        {{msg.payload.desc}}\n    </p>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 910,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "func_solar_static",
+        "type": "function",
+        "z": "tab_iss_tracker_v8",
+        "name": "Static Solar Data (V8)",
+        "func": "// V8修正：確保資料庫鍵值與下拉選單完全一致\nvar db = {\n    \"sun\": { name: \"太陽 (Sun)\", gravity: \"274 m/s²\", temp: \"5505 °C (表面)\", mass: \"1.989 × 10^30 kg\", moons: 0, type: \"恆星\" },\n    \"mercury\": { name: \"水星 (Mercury)\", gravity: \"3.7 m/s²\", temp: \"167 °C\", mass: \"3.285 × 10^23 kg\", moons: 0, type: \"行星\" },\n    \"venus\": { name: \"金星 (Venus)\", gravity: \"8.87 m/s²\", temp: \"464 °C\", mass: \"4.867 × 10^24 kg\", moons: 0, type: \"行星\" },\n    \"earth\": { name: \"地球 (Earth)\", gravity: \"9.8 m/s²\", temp: \"15 °C\", mass: \"5.972 × 10^24 kg\", moons: 1, type: \"行星\" },\n    \"mars\": { name: \"火星 (Mars)\", gravity: \"3.71 m/s²\", temp: \"-65 °C\", mass: \"6.39 × 10^23 kg\", moons: 2, type: \"行星\" },\n    \"jupiter\": { name: \"木星 (Jupiter)\", gravity: \"24.79 m/s²\", temp: \"-110 °C\", mass: \"1.898 × 10^27 kg\", moons: 79, type: \"氣態巨行星\" },\n    \"saturn\": { name: \"土星 (Saturn)\", gravity: \"10.44 m/s²\", temp: \"-140 °C\", mass: \"5.683 × 10^26 kg\", moons: 82, type: \"氣態巨行星\" },\n    \"uranus\": { name: \"天王星 (Uranus)\", gravity: \"8.69 m/s²\", temp: \"-195 °C\", mass: \"8.681 × 10^25 kg\", moons: 27, type: \"冰巨行星\" },\n    \"neptune\": { name: \"海王星 (Neptune)\", gravity: \"11.15 m/s²\", temp: \"-200 °C\", mass: \"1.024 × 10^26 kg\", moons: 14, type: \"冰巨行星\" }\n};\n\nvar selected = msg.payload;\nif (db[selected]) {\n    msg.payload = db[selected];\n} else {\n    // 預設或無效值\n    msg.payload = { name: \"請選擇目標\", gravity: \"-\", temp: \"-\", mass: \"-\", moons: \"-\", type: \"-\" };\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 620,
+        "wires": [
+            [
+                "ui_solar_card"
+            ]
+        ]
+    },
+    {
+        "id": "ui_solar_card",
+        "type": "ui_template",
+        "z": "tab_iss_tracker_v8",
+        "group": "group_solar",
+        "name": "Solar Card",
+        "order": 2,
+        "width": 6,
+        "height": 5,
+        "format": "<div style=\"padding: 10px; border: 1px solid #00f0ff; background: rgba(0,0,0,0.4); box-shadow: inset 0 0 20px rgba(0,240,255,0.1);\">\n    <h3 style=\"color: #00f0ff; border-bottom: 2px solid #ff0055; padding-bottom: 5px; margin-top: 0; display:flex; justify-content:space-between;\">\n        <span>{{msg.payload.name}}</span>\n        <span style=\"font-size:0.6em; background:#ff0055; color:black; padding:2px 5px; align-self:center;\">{{msg.payload.type}}</span>\n    </h3>\n    \n    <div style=\"display:grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top:15px;\">\n        <div style=\"border-left: 2px solid #00f0ff; padding-left:8px;\">\n            <div style=\"font-size:0.7em; color:#888;\">重力 (GRAVITY)</div>\n            <div style=\"font-size:1.1em; color:#fff;\">{{msg.payload.gravity}}</div>\n        </div>\n        <div style=\"border-left: 2px solid #00f0ff; padding-left:8px;\">\n             <div style=\"font-size:0.7em; color:#888;\">平均溫度 (AVG TEMP)</div>\n            <div style=\"font-size:1.1em; color:#fff;\">{{msg.payload.temp}}</div>\n        </div>\n        <div style=\"border-left: 2px solid #00f0ff; padding-left:8px;\">\n             <div style=\"font-size:0.7em; color:#888;\">質量 (MASS)</div>\n            <div style=\"font-size:1.1em; color:#fff;\">{{msg.payload.mass}}</div>\n        </div>\n         <div style=\"border-left: 2px solid #00f0ff; padding-left:8px;\">\n             <div style=\"font-size:0.7em; color:#888;\">衛星數量 (SATELLITES)</div>\n            <div style=\"font-size:1.1em; color:#fff;\">{{msg.payload.moons}}</div>\n        </div>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 570,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ui_drop_planet",
+        "type": "ui_dropdown",
+        "z": "tab_iss_tracker_v8",
+        "name": "Select Planet",
+        "label": "目標系統:",
+        "tooltip": "",
+        "place": "選擇天體...",
+        "group": "group_solar",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "太陽 (Sun)",
+                "value": "sun",
+                "type": "str"
+            },
+            {
+                "label": "水星 (Mercury)",
+                "value": "mercury",
+                "type": "str"
+            },
+            {
+                "label": "金星 (Venus)",
+                "value": "venus",
+                "type": "str"
+            },
+            {
+                "label": "地球 (Earth)",
+                "value": "earth",
+                "type": "str"
+            },
+            {
+                "label": "火星 (Mars)",
+                "value": "mars",
+                "type": "str"
+            },
+            {
+                "label": "木星 (Jupiter)",
+                "value": "jupiter",
+                "type": "str"
+            },
+            {
+                "label": "土星 (Saturn)",
+                "value": "saturn",
+                "type": "str"
+            },
+            {
+                "label": "天王星 (Uranus)",
+                "value": "uranus",
+                "type": "str"
+            },
+            {
+                "label": "海王星 (Neptune)",
+                "value": "neptune",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "planet",
+        "topicType": "str",
+        "className": "",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "func_solar_static"
+            ]
+        ]
+    },
+    {
+        "id": "inject_weather",
+        "type": "inject",
+        "z": "tab_iss_tracker_v8",
+        "name": "每10秒更新",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 680,
+        "wires": [
+            [
+                "func_weather_sim"
+            ]
+        ]
+    },
+    {
+        "id": "func_weather_sim",
+        "type": "function",
+        "z": "tab_iss_tracker_v8",
+        "name": "Space Weather Sim",
+        "func": "// Simulate Space Weather Data\nvar solarWind = Math.floor(Math.random() * (600 - 300 + 1) + 300); // 300-600 km/s\nvar kpIndex = Math.floor(Math.random() * 9); // 0-9 Kp index\nvar xRay = \"A\" + (Math.random() * 9).toFixed(1); // X-Ray Flux\nif (Math.random() > 0.8) xRay = \"M\" + (Math.random() * 5).toFixed(1);\n\nmsg.payload = {\n    wind: solarWind,\n    kp: kpIndex,\n    xray: xRay,\n    status: kpIndex > 5 ? \"磁暴警報\" : \"一般\"\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 680,
+        "wires": [
+            [
+                "ui_weather_dash"
+            ]
+        ]
+    },
+    {
+        "id": "ui_weather_dash",
+        "type": "ui_template",
+        "z": "tab_iss_tracker_v8",
+        "group": "7fe39018265d7e39",
+        "name": "Weather Dashboard",
+        "order": 1,
+        "width": 6,
+        "height": 4,
+        "format": "<div style=\"padding: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;\">\n    <div style=\"background: rgba(255, 0, 85, 0.1); border: 1px solid #ff0055; padding: 10px; text-align: center;\">\n        <div style=\"font-size: 0.7em; color: #ff0055;\">太陽風速 (SOLAR WIND)</div>\n        <div style=\"font-size: 1.5em; color: #fff;\">{{msg.payload.wind}} <span style=\"font-size:0.5em\">km/s</span></div>\n    </div>\n    <div style=\"background: rgba(0, 240, 255, 0.1); border: 1px solid #00f0ff; padding: 10px; text-align: center;\">\n        <div style=\"font-size: 0.7em; color: #00f0ff;\">地磁指數 (Kp)</div>\n        <div style=\"font-size: 1.5em; color: #fff;\">{{msg.payload.kp}}</div>\n    </div>\n    <div style=\"background: rgba(0, 255, 0, 0.1); border: 1px solid #00ff00; padding: 10px; text-align: center;\">\n        <div style=\"font-size: 0.7em; color: #00ff00;\">X射線通量 (X-RAY)</div>\n        <div style=\"font-size: 1.5em; color: #fff;\">{{msg.payload.xray}}</div>\n    </div>\n    <div style=\"background: rgba(255, 255, 0, 0.1); border: 1px solid #ffff00; padding: 10px; text-align: center;\">\n        <div style=\"font-size: 0.7em; color: #ffff00;\">狀態 (STATUS)</div>\n        <div style=\"font-size: 1.2em; color: #fff; font-weight:bold;\">{{msg.payload.status}}</div>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 580,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bae37af728086490",
+        "type": "debug",
+        "z": "tab_iss_tracker_v8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "68801d31655631b6",
+        "type": "http request",
+        "z": "tab_iss_tracker_v8",
+        "name": "POST Gemini API",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 710,
+        "y": 740,
+        "wires": [
+            [
+                "fc9fe9520f823fcf",
+                "bae37af728086490"
+            ]
+        ]
+    },
+    {
+        "id": "a17cf45af15ab6fc",
+        "type": "function",
+        "z": "tab_iss_tracker_v8",
+        "name": "準備 API 請求 (Prep)",
+        "func": "if (!msg.payload || String(msg.payload).trim() === \"\") {\n    return null; \n}\n\nconst API_KEY = \"YOUR_API_KEY_HERE\";\n\nmsg.url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${API_KEY}`;\n\nmsg.headers = {\n    \"Content-Type\": \"application/json\"\n};\n\nmsg.payload = {\n    \"contents\": [{\n        \"parts\": [{\n            \"text\": msg.payload\n        }]\n    }]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 740,
+        "wires": [
+            [
+                "68801d31655631b6"
+            ]
+        ]
+    },
+    {
+        "id": "fc9fe9520f823fcf",
+        "type": "function",
+        "z": "tab_iss_tracker_v8",
+        "name": "處理 API 回應 (Proc)",
+        "func": "if (msg.payload && msg.payload.candidates && msg.payload.candidates.length > 0) {\n    msg.payload = msg.payload.candidates[0].content.parts[0].text;\n    msg.topic = \"gemini\";\n} else {\n    msg.payload = \"API 錯誤或無內容\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 740,
+        "wires": [
+            [
+                "d83b53ec3577acb3"
+            ]
+        ]
+    },
+    {
+        "id": "1beec661959cf99f",
+        "type": "ui_text_input",
+        "z": "tab_iss_tracker_v8",
+        "name": "Chat Input",
+        "label": "指令輸入:",
+        "tooltip": "詢問 AI 資料庫...",
+        "group": "group_ai",
+        "order": 2,
+        "width": 8,
+        "height": 1,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "user_input",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "bec4d3039ef39657"
+            ]
+        ]
+    },
+    {
+        "id": "d83b53ec3577acb3",
+        "type": "ui_template",
+        "z": "tab_iss_tracker_v8",
+        "group": "group_ai",
+        "name": "Chat History Display",
+        "order": 1,
+        "width": 8,
+        "height": 11,
+        "format": "<div id=\"chat-box\" style=\"height: 400px; overflow-y: auto; padding: 10px; display: flex; flex-direction: column; gap: 10px;\">\n    \n    <div ng-if=\"history.length === 0\" style=\"text-align: center; color: #888; margin-top: 20px;\">\n        AI 助手準備就緒\n    </div>\n\n    <div ng-repeat=\"item in history track by $index\" \n         ng-style=\"item.type === 'user' ? {'align-self': 'flex-end', 'background': '#0084ff', 'color': 'white'} : {'align-self': 'flex-start', 'background': '#e4e6eb', 'color': 'black'}\"\n         style=\"max-width: 80%; padding: 8px 12px; border-radius: 12px; font-size: 14px; line-height: 1.5;\">\n        <strong>{{item.sender}}:</strong><br>\n        <span style=\"white-space: pre-wrap;\">{{item.text}}</span>\n    </div>\n</div>\n\n<script>\n    (function(scope) {\n    scope.history = scope.history || [];\n\n    scope.$watch('msg', function(newVal) {\n        if (!newVal) return;\n\n        var payload = newVal.payload;\n        if (payload && String(payload).trim() !== \"\") {\n            \n            if (newVal.topic === 'user_input') {\n                scope.history.push({ type: 'user', sender: 'You', text: payload });\n            } else if (newVal.topic === 'gemini') {\n                scope.history.push({ type: 'ai', sender: 'Gemini', text: payload });\n            }\n            \n            setTimeout(function(){\n                var div = document.getElementById(\"chat-box\");\n                if(div) div.scrollTop = div.scrollHeight;\n            }, 100);\n        }\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 540,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bec4d3039ef39657",
+        "type": "switch",
+        "z": "tab_iss_tracker_v8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 290,
+        "y": 740,
+        "wires": [
+            [
+                "a17cf45af15ab6fc",
+                "d83b53ec3577acb3"
+            ]
+        ]
+    },
+    {
+        "id": "6facdd7c24b167a8",
+        "type": "inject",
+        "z": "tab_iss_tracker_v8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 920,
+        "wires": [
+            [
+                "548bdfb98d8ad2f4"
+            ]
+        ]
+    },
+    {
+        "id": "548bdfb98d8ad2f4",
+        "type": "http request",
+        "z": "tab_iss_tracker_v8",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.spaceflightnewsapi.net/v4/articles/?limit=5",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 260,
+        "y": 920,
+        "wires": [
+            [
+                "d578a08b6c30e309"
+            ]
+        ]
+    },
+    {
+        "id": "d578a08b6c30e309",
+        "type": "function",
+        "z": "tab_iss_tracker_v8",
+        "name": "整理新聞",
+        "func": "// 檢查 API 是否回傳了結果\nif (msg.payload && msg.payload.results) {\n    // 只保留 results 陣列傳給下一個節點\n    msg.payload = msg.payload.results;\n} else {\n    msg.payload = [];\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 920,
+        "wires": [
+            [
+                "7e1d7c3b945af515"
+            ]
+        ]
+    },
+    {
+        "id": "7e1d7c3b945af515",
+        "type": "ui_template",
+        "z": "tab_iss_tracker_v8",
+        "group": "91660cd8dd51f3f9",
+        "name": "",
+        "order": 1,
+        "width": 8,
+        "height": 12,
+        "format": "<!-- 外層容器：背景全黑 -->\n<div style=\"height: 500px; overflow-y: scroll; background-color: #000000; padding: 10px;\">\n    \n    <!-- 使用 Angular 迴圈顯示每一則新聞 -->\n    <div ng-repeat=\"news in msg.payload\" style=\"\n        background: #333333; /* 卡片背景：深灰色 */\n        margin-bottom: 15px; \n        border-radius: 8px; \n        border: 1px solid #333; /* 增加一個微弱的邊框 */\n        box-shadow: 0 2px 5px rgba(255,255,255,0.1); /* 陰影改為淡淡的白色 */\n        overflow: hidden;\n        font-family: sans-serif;\">\n        \n        <!-- 新聞圖片 -->\n        <div style=\"height: 150px; overflow: hidden; background: #000;\">\n            <img ng-src=\"{{news.image_url}}\" style=\"width: 100%; height: 100%; object-fit: cover; opacity: 0.8;\">\n        </div>\n        \n        <!-- 文字內容 -->\n        <div style=\"padding: 12px;\">\n            <!-- 標題：改為亮白色 -->\n            <h3 style=\"margin: 0 0 8px 0; font-size: 16px; line-height: 1.4; color: #ffffff;\">\n                {{news.title}}\n            </h3>\n            \n            <!-- 日期：改為淺灰色 -->\n            <p style=\"font-size: 12px; color: #aaaaaa; margin-bottom: 10px;\">\n                {{news.published_at | date:'yyyy-MM-dd HH:mm'}}\n            </p>\n            \n            <!-- 按鈕：改為亮藍色，增加對比度 -->\n            <a href=\"{{news.url}}\" target=\"_blank\" style=\"\n                display: inline-block;\n                padding: 6px 12px;\n                background-color: #0084ff;\n                color: white;\n                text-decoration: none;\n                border-radius: 4px;\n                font-size: 12px;\">\n                閱讀全文\n            </a>\n        </div>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 580,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b0a8caeb3b4312b",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-web-worldmap": "5.5.4"
+        }
+    }
+]
