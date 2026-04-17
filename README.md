@@ -31,11 +31,21 @@
 
 ## 快速部署指南 (Quick Start)
 
-1. 確保本地端已安裝 [Node.js](https://nodejs.org/) 與 [Node-RED](https://nodered.org/) 環境。
-2. 於本專案目錄下執行 `npm install` 安裝相依套件（如 `node-red-dashboard` (UI 介面核心)和 `node-red-contrib-web-worldmap` (即時地圖套件)）。
-3. 啟動 Node-RED 伺服器 (`node-red` 指令)，於編輯介面右側選單點擊 **Import**，匯入 `Space_AI_Dashboard.json`。
-4. 雙擊名為「準備 API 請求 (Prep)」的 Function 節點，替換為您的 Google Gemini API Key。
-5. 點擊右上角 **Deploy** 進行部署，開啟瀏覽器進入 `http://localhost:1880/ui` 即可檢視儀表板。
+如欲在本地端執行本專案，請確保已安裝 [Node.js](https://nodejs.org/) 與 [Node-RED](https://nodered.org/)。
+
+1. 啟動 Node-RED (`node-red` 指令)。
+2. **安裝必要模組**：請至 Node-RED 右上角選單 -> 「節點管理 (Manage palette)」中安裝以下套件：
+   * `node-red-dashboard` (UI 介面核心)
+   * `node-red-contrib-web-worldmap` (即時地圖套件)
+3. **匯入流程檔案**：
+   * 點擊右上角選單 -> **Import**。
+   * 將本專案中的 `Space_AI_Dashboard.json` 內容貼上並匯入。
+4. **設定 API Key**：
+   * 雙擊名為「準備 API 請求 (Prep)」的 Function 節點。
+   * 將 `YOUR_API_KEY_HERE` 替換為有效的 Google Gemini API Key。
+   * *(註：NASA API 已預設使用 `DEMO_KEY`，可直接運行)*
+5. 點擊右上角 **Deploy** 進行部署。
+6. 開啟瀏覽器進入 `http://localhost:1880/ui` 檢視太空儀表板。
 
 ## 系統畫面截圖 (Screenshots)
 
